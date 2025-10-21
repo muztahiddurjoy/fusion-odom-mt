@@ -27,7 +27,7 @@ def generate_launch_description():
         # GPS Publisher Node
         Node(
             package='fusion_odom',
-            executable='gps_publisher.py',
+            executable='gps_publisher',
             name='gps_publisher',
             output='screen',
             parameters=[{'use_sim_time': use_sim_time}]
@@ -36,7 +36,7 @@ def generate_launch_description():
         # Sensor Fusion Bridge Node
         Node(
             package='fusion_odom',
-            executable='sensor_fusion_bridge.py',
+            executable='sensor_fusion_bridge',
             name='sensor_fusion_bridge',
             output='screen',
             parameters=[{'use_sim_time': use_sim_time}]
