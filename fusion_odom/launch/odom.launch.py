@@ -10,7 +10,7 @@ import os
 def generate_launch_description():
     # Get the path to the config file
     # Replace 'your_package_name' with your actual package name
-    pkg_share = get_package_share_directory('fusion-odom')
+    pkg_share = get_package_share_directory('fusion_odom')
     config_file = os.path.join(pkg_share, 'config', 'ekf.yaml')
     
     # Declare launch arguments
@@ -26,7 +26,7 @@ def generate_launch_description():
         
         # GPS Publisher Node
         Node(
-            package='fusion-odom',
+            package='fusion_odom',
             executable='gps_publisher.py',
             name='gps_publisher',
             output='screen',
@@ -35,7 +35,7 @@ def generate_launch_description():
         
         # Sensor Fusion Bridge Node
         Node(
-            package='fusion-odom',
+            package='fusion_odom',
             executable='sensor_fusion_bridge.py',
             name='sensor_fusion_bridge',
             output='screen',
